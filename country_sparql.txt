@@ -1,0 +1,15 @@
+// Normal version
+
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+SELECT ?lat ?long
+WHERE {
+    <http://dbpedia.org/resource/Sweden> geo:lat ?lat .
+    <http://dbpedia.org/resource/Sweden> geo:long ?long .
+}
+
+// Shorter version
+
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT ?lat ?long
+WHERE{<http://dbpedia.org/resource/Niger> geo:lat ?lat ; geo:long ?long.}
